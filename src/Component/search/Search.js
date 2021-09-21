@@ -18,7 +18,7 @@ const ContainerIcon = styled.span`
 background-color: ${CSecondary};
 display: flex;
 color:#fff;
-padding:8.5px 10px;
+padding:10px 10px;
 align-items: center;
 justify-content: center;
 text-align:center;
@@ -39,5 +39,5 @@ display: flex;
 align-items:center;
 margin : 20px 0px;
 justify-content: center;
-background-color: red;
+/* background-color: red; */
 `

@@ -44,13 +44,13 @@ export const Dashboard = () => {
       <ModalStockDashboard data={data1} show={modal.stockAlert} onHide={() => setModal({ ...modal, stockAlert: false })} />
       <h1>Dashboard</h1>
       <div className="row mt-5  mb-5 justify-content-center align-items-center">
-        <div className="col-md-3 col-sm-6">
+        <div className="col-md-6 col-lg-3 col-sm-6">
           <CardDashboard BgColor="#29A0B1" title="Total Product" />
         </div>
-        <div className="col-md-3 col-sm-6">
+        <div className="col-md-6 col-lg-3 col-sm-6">
           <CardDashboard BgColor="#167D7F" title="Penjualan / Bulan" />
         </div>
-        <div className="col-md-3 col-sm-6">
+        <div className="col-md-6 col-lg-3 col-sm-6">
           <CardDashboard BgColor="#638C80" title="Pembelian / Bulan" />
         </div>
         {/* <div className="col-md-3 col-sm-6">
