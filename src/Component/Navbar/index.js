@@ -1,19 +1,9 @@
 import React, { useState } from 'react'
 import { ContainerIcon, ContainerNavbar, LeftNavbar, LinkNavbar, RightNavbar, SideNav } from './style.Navbar'
-import { FaBars, FaGrinTears, FaHome } from 'react-icons/fa'
+import { FaBars, FaBoxOpen, FaGrinTears, FaHome } from 'react-icons/fa'
+import { DataSidebar } from './sidebarData'
 
-const data = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: <FaHome />
-  },
-  {
-    path: "/profile",
-    name: "Profile",
-    icon: <FaGrinTears />
-  },
-]
+
 
 export const Navbar = () => {
   const [side, setSide] = useState(false)
@@ -24,9 +14,9 @@ export const Navbar = () => {
         <LeftNavbar >
           <FaBars cursor="pointer" fontSize={20} onClick={() => setSide(!side)} />
         </LeftNavbar>
-        <RightNavbar>
+        {/* <RightNavbar>
           list navbar
-        </RightNavbar>
+        </RightNavbar> */}
       </div>
 
 
@@ -40,10 +30,12 @@ export const Navbar = () => {
 
 
         </div>
-        <div>
+        <div className="mt-5">
           {
-            data.map((item, index) => (
-              <LinkNavbar key={index}>
+            DataSidebar.map((item, index) => (
+              <LinkNavbar key={index} to={item.path}
+                active={item.path === window.location.pathname ? true : false}
+              >
                 <div>
                   {item.icon}
                 </div> &nbsp;

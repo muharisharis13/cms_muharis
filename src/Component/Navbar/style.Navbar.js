@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { CPrimary, CSecondary } from '../utl'
 
 
 export const LinkNavbar = styled(Link)`
-background-color: transparent !important;
 display: flex;
 flex: 1;
 padding:10px 10px;
 margin:5px 0px;
-color: #000;
+color: #fff;
 font-size: 13pt;
 font-weight: 500;
 transition: 250ms;
@@ -18,20 +18,22 @@ ${({ active }) => {
     if (active) {
       return `
     
+      background-color: ${CSecondary} !important;
     `
     }
     else {
       return `
-    
+
+        background-color: transparent !important;
     `
     }
   }}
 
 &:hover {
   text-decoration: none;
-  color:#000;
+  color:#fff;
 
-border : 1px solid red;
+border : 1px solid ${CSecondary};
 }
 `
 
@@ -50,9 +52,10 @@ height: 100vh;
 display: flex;
 flex-direction: column;
 transition: 250ms;
-box-shadow: 3px -1px 10px -5px rgba(0,0,0,0.75);
+/* box-shadow: 3px -1px 10px -5px rgba(0,0,0,0.75); */
 z-index:2;
-background-color: #fff;
+color:#fff;
+background-color: ${CPrimary};
 `
 
 export const LeftNavbar = styled.div`
